@@ -1,29 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const PhaseCard = () => {
+const PhaseCard = ({ workout }) => {
+  // console.log(workout);
   return (
-    <div className="col-md-3 h-25">
+    <div className=" col-md-3 h-25">
       <div className="card mb-4 shadow">
         <div className="card-body bg-info d-flex justify-content-center">
-          Phase I
+          Phase {"_"}
+          <strong>{workout.phase}</strong>
         </div>
         <div className="card-body" style={{ width: "200px" }}>
-          <p className="card-text">5 Days</p>
-          <small className="text-muted">Week 1,2,3</small>
-          <div className="d-flex justify-content-between align-items-center">
+          <p className="card-text">{workout.days.length} Days</p>
+          <small className="text-muted">Week {workout.weeks.toString()}</small>
+          <div className="d-flex justify-content-between align-items-center mt-1">
             <div className="btn-group">
-              <button
+              <Link
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
+                to="/about"
               >
                 View
-              </button>
-              <button
+              </Link>
+              <Link
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
+                to="/"
               >
                 Edit
-              </button>
+              </Link>
             </div>
           </div>
         </div>
