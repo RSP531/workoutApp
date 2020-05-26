@@ -18,7 +18,7 @@ const PhaseCard = ({ workout }) => {
               <Link
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
-                to="/about"
+                to="/singlePhase"
               >
                 View
               </Link>

@@ -7,6 +7,7 @@ import Phases from "./components/pages/Phases";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import NavBar from "./components/layout/NavBar";
+import SinglePhase from "./components/pages/SinglePhase";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/phases" component={Phases} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/singlePhase" component={SinglePhase} />
           </Switch>
         </div>
       </Router>
