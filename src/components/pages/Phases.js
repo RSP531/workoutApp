@@ -1,13 +1,14 @@
 import React from "react";
+import PhaseCard from "./PhaseCard";
 
 const Phases = () => {
   return (
-    <div className="container">
+    <div className="container mt-3">
       <div className="row">
-        <div className="col">CARD</div>
-        <div className="col">CARD</div>
-        <div className="col">CARD</div>
-        <div className="col">CARD</div>
+        <PhaseCard />
+        <PhaseCard />
+        <PhaseCard />
+        <PhaseCard />
       </div>
     </div>
   );

@@ -43,6 +43,11 @@ const NavBar = () => {
           Phases
         </Link>
       </li>
+      <li className="nav-item">
+        <Link className="nav-link bg-warning" to="/about">
+          About
+        </Link>
+      </li>
     </Fragment>
   );
   return (
