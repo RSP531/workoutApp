@@ -1,40 +1,58 @@
-import React, { useRef } from "react";
+import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
-  const text = useRef("");
-  const onChange = e => {
-    console.log(text.current.value);
-    //something here
-    // searchLogs(text.current.value);
-  };
+  //const text = useRef("");
+  // const onChange = e => {
+  //   console.log(text.current.value);
+  //   //something here
+  //   // searchLogs(text.current.value);
+  // };
+  const isAuthenticated = false;
+  //const { isAuthenticated, logoutUser, user } = authContext;
+
+  const authLinks = (
+    <Fragment>
+      {/* <li>
+        Hello {user && user.firstName} {user && user.lastName}
+      </li>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <a onClick={onLogout} href="#!">
+          <i className="fas fa-sign-out-alt"></i>
+          <span className="hide-sm">Logout</span>
+        </a>
+      </li> */}
+    </Fragment>
+  );
+
+  const guestLinks = (
+    <Fragment>
+      <li className="nav-item">
+        <Link className="nav-link active bg-warning" to="/">
+          Home
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link bg-warning" to="/phases">
+          Phases
+        </Link>
+      </li>
+    </Fragment>
+  );
   return (
-    <nav style={{ marginBottom: "30px" }} className="green">
-      <div className="nav-wrapper">
-        <form>
-          <div className="input-field">
-            <input
-              id="search"
-              type="search"
-              placeholder="Search Logs..."
-              ref={text}
-              onChange={onChange}
-            />
-            <label className="label-icon" htmlFor="search">
-              <i className="material-icons">search</i>
-            </label>
-            <i
-              className="material-icons"
-              onClick={() => {
-                text.current.value = "";
-                //not done, need to get the logs
-              }}
-            >
-              close
-            </i>
-          </div>
-        </form>
-      </div>
-    </nav>
+    <div className="navbar bg-info mb-2">
+      <i className="fas fa-dumbbell fa-2x"></i>
+      <h1> Rob's Workout App</h1>
+      <ul className="nav justify-content-end">
+        {isAuthenticated ? authLinks : guestLinks}
+      </ul>
+    </div>
   );
 };
 
