@@ -71,4 +71,10 @@ VALUES
   ('Dumbbell Flys',3,15,2),
   ('Dumbbell Upright Rows',4,10,2),
   ('Alternating Dumbbell Front Raises',3,12,2),
-  ('Lateral Raises',3,12,2);
+  ('Lateral Raises',3,12,2),
+  ('Squats',4,12,3),
+	('Walking Lunges',3,10,3),
+	('Romanian Deadlift',4,12,3),
+	('Glute Bridges',3,10,3),
+	('Kettle Bell Swings',3,12,3),
+	('Seated Calf Raise	',5,10,3);
